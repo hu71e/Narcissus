@@ -80,9 +80,7 @@ local function TakeOutFromUIParent(frame, FrameStrata, bool) --take out Gametool
 
 	if frame then
 		if bool == true then
-			--frame:SetParent(nil);
-			--HACK：重设继承到Gametooltip，解决文本文字渲染被污染的问题
-			frame:SetParent(Gametooltip);
+			frame:SetParent(nil);
 			frame:SetFrameStrata(FrameStrata);
 			if frame:GetName() == "GameTooltip" then
 				frame:SetScale(GameTooltipScale*(UIParent:GetScale()));
